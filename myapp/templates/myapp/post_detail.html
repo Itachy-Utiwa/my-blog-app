@@ -78,7 +78,7 @@ h1 a {
             <p>published on {{ post.published_date }}</p>
         </div>
 
-        <p>  <h1> <a href="{{% url 'post_detail' pk=post.pk %}}">{{ post.title }}</a> </h1></p> 
+        <p>  <h1> <a href="{{post.text}}">{{ post.title }}</a> </h1></p> 
         <p>{{ post.text|linebreaksbr}}</p>
         <p> <h4>By {{ post.author }}</h4></p><hr><br>
     </div>
