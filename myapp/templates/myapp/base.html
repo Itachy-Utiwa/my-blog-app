@@ -1,0 +1,48 @@
+{% load static %}
+<html>
+    <head>
+  <title>Blogger|Accueil</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+ 
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Lobster&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="{% static 'css/myapp.css' %}">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+ 
+</head>
+    <body>
+
+
+<!--Codes CSS-->
+
+<!-- Code HTML--> 
+
+<div class="content container-fluid">
+    <div class="row">
+        <div class="col-md-8">
+          
+
+        <div class="page-header">
+        <a href="{% url 'post_new' %}" class="top-menu"><span class="glyphicon glyphicon-plus"></span></a>
+            <h1><a href="/">Blogger</a></h1><hr>
+        </div>
+
+        <div class="col-12">
+        {% block content %}
+        {% endblock%}
+       </div>
+       
+
+
+      </div>
+    </div>
+</div>
+       
+<footer class="container-fluid text-center">
+  <p>Blogger-Copyrigh @ 2019| Tout droit réservé.
+</footer>
+  
+    </body>
+</html>

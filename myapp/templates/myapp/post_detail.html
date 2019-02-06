@@ -1,91 +1,28 @@
+{% extends 'myapp/base.html' %}
 
-<html>
-    <head>
-  <title>Blogger|Accueil</title>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
- 
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
-  <link href="https://fonts.googleapis.com/css?family=Lobster&subset=latin,latin-ext" rel="stylesheet" type="text/css">
-  <link rel="stylesheet" type="text/css" href="styles.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
- 
-</head>
-    <body>
-
-
-<!--Codes CSS-->
-<style>
-             
-body {
-       padding-left: 15px;
-     }
-
-
-h1 a {
-        color: #FCA205;
-        font-family: 'Lobster';
-     }
-
-
-.page-header {
-              background-color: #ff9400;
-              margin-top: 0;
-             padding: 20px 20px 20px 40px;
-            }
-
-
-.page-header h1, .page-header h1 a, .page-header h1 a:visited, .page-header h1 a:active {
-                                                color: #ffffff;
-                                                font-size: 36pt;
-                                                text-decoration: none;
-                                               }
-
-
-.content{
-         margin-left: 40px;
-        }
-
-.date {
-    float: right;
-    color: #828282;
-}
-
-
-
-
-</style>
-
-
-
-
-<!-- Code HTML--> 
-
-<div class="content container-fluid">
-    <div class="row">
-        <div class="col-md-8">
-
-        <div class="page-header">
-            <h1><a href="">Blogger</a></h1><hr>
-        </div>
-
+ {% block content %}
         {% for post in posts %}
+             
+<div class="post">
 
+                <p>
+                    <h1>
+                          {{ post.title }}
+                   </h1>
+               </p> 
+               
+                <p>
+                   {{ post.text|linebreaksbr}}
+                </p>
 
-    <div class="post">
-        <div class="date">
-            <p>published on {{ post.published_date }}</p>
-        </div>
-
-        <p>  <h1> <a href="{{post.text}}">{{ post.title }}</a> </h1></p> 
-        <p>{{ post.text|linebreaksbr}}</p>
-        <p> <h4>By {{ post.author }}</h4></p><hr><br>
-    </div>
-{% endfor %}
-           </div>
-     </div>
+                <p> 
+                  <h4>
+                     By {{ post.author }}
+                 </h4>
+             </p>
+             <hr> 
 </div>
 
-    </body>
-</html>
+        {% endfor %}
+ {% endblock%}  
+                   

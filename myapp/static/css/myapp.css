@@ -1,0 +1,50 @@
+body {
+       padding-left: 15px;
+     }
+
+
+h1 a {
+        color: #FCA205;
+        font-family: 'Lobster';
+     }
+.post h1{
+    font-family: 'Lobster';
+}
+
+.post-form h5{
+            font-family: 'Lobster';
+            color: green;
+}
+
+.page-header {
+              background-color: #ff9400;
+              margin-top: 0;
+             padding: 20px 20px 20px 40px;
+            margin-right: -400px;
+            }
+
+
+.page-header h1, .page-header h1 a, .page-header h1 a:visited, .page-header h1 a:active {
+                                                color: #ffffff;
+                                                font-size: 36pt;
+                                                text-decoration: none;
+                                               }
+
+
+.content{
+         margin-left: 40px;
+        }
+
+.date {
+    float: right;
+    color: #828282;
+}
+
+footer{
+        background: #ff9400;
+        font-family: 'Lobster';
+        height: 100px;
+        text-align: center;
+        padding-top: 50px;
+        margin-right: 100px;
+}
